@@ -7,7 +7,6 @@ import json
 from pydantic import BaseModel
 from typing import List
 
-
 class Forecast(BaseModel):
     weather:  List
 
@@ -19,9 +18,6 @@ async def request(client):
 
 app = FastAPI()
 URL = "https://fcc-weather-api.glitch.me/api/current?"
-
-
-
 
 
 @app.get("/weather", response_model=Forecast)

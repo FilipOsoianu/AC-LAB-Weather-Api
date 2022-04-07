@@ -18,4 +18,4 @@ spec:
           image: weather-api
           imagePullPolicy: Never 
           ports:
-            - containerPort: 8080
+            - containerPort: 80
