@@ -25,7 +25,7 @@ URL = "https://fcc-weather-api.glitch.me/api/current?"
 
 
 @app.get("/weather", response_model=Forecast)
-async def get_model(lat: str = Query('20'), lon: str = Query('139')):
+async def get_model(lat: str = Query('15'), lon: str = Query('139')):
     requestURL = URL + 'lat=' + lat + '&lon=' + lon
     response = json.loads(requests.get(requestURL).text)
     print(response['weather'])
