@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weatherapi
+  labels:
+    name: weatherapi
+spec:
+  selector:
+    matchLabels:
+      name: weatherapi
+  template:
+    metadata:
+      labels:
+        name: weatherapi
+    spec:
+      containers:
+        - name: weatherapi
+          image: weather-api
+          imagePullPolicy: Never 
+          ports:
+            - containerPort: 8080
